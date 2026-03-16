@@ -158,7 +158,7 @@ function BrowserFrame({
   );
 }
 
-function ContactForm() {
+function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -174,71 +174,55 @@ function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="text-center py-12">
-        <p className="text-2xl font-light text-[var(--color-charcoal)]">
-          Thank you.
-        </p>
-        <p className="text-gray-500 mt-2">
-          I&apos;ll be in touch within 24 hours.
-        </p>
-      </div>
+      <section id="contact" className="py-32 md:py-44 px-6 scroll-mt-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-light text-[var(--color-charcoal)]">
+            Thank you.
+          </h2>
+          <p className="text-lg text-gray-500 mt-4">
+            I&apos;ll be in touch shortly.
+          </p>
+        </div>
+      </section>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-5 border border-gray-200 rounded-xl p-8">
-      <div>
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-gray-600 mb-1.5"
-        >
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm"
-        />
+    <section id="contact" className="py-20 md:py-32 px-6 scroll-mt-20">
+      <div className="max-w-4xl mx-auto text-center">
+        <FadeIn>
+          <p className="text-xs font-medium tracking-[0.2em] text-[var(--color-accent)] uppercase mb-4">
+            Discuss your project
+          </p>
+          <h2 className="text-3xl md:text-4xl font-light text-[var(--color-charcoal)] mb-4">
+            Let&apos;s discuss your project
+          </h2>
+          <p className="text-gray-500 mb-12 max-w-md mx-auto">
+            Describe the website you need and I&apos;ll get back to you within
+            24 hours with a plan and a quote.
+          </p>
+        </FadeIn>
+        <FadeIn>
+          <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-5 border border-gray-200 rounded-xl p-8">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-600 mb-1.5">Name</label>
+              <input type="text" id="name" name="name" required className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm" />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-1.5">Email</label>
+              <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm" />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-600 mb-1.5">Tell me about the website you need</label>
+              <textarea id="message" name="message" rows={4} required className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm resize-none" />
+            </div>
+            <button type="submit" className="w-full bg-[var(--color-charcoal)] text-white py-3.5 rounded-lg text-sm font-medium tracking-wide hover:bg-black transition-colors cursor-pointer">
+              Send project details
+            </button>
+          </form>
+        </FadeIn>
       </div>
-      <div>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-600 mb-1.5"
-        >
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm"
-        />
-      </div>
-      <div>
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-gray-600 mb-1.5"
-        >
-          Tell me about the website you need
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={4}
-          required
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-[var(--color-accent)] transition-colors text-sm resize-none"
-        />
-      </div>
-      <button
-        type="submit"
-        className="w-full bg-[var(--color-charcoal)] text-white py-3.5 rounded-lg text-sm font-medium tracking-wide hover:bg-black transition-colors cursor-pointer"
-      >
-        Send project details
-      </button>
-    </form>
+    </section>
   );
 }
 
@@ -451,25 +435,7 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 md:py-32 px-6 scroll-mt-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <FadeIn>
-            <p className="text-xs font-medium tracking-[0.2em] text-[var(--color-accent)] uppercase mb-4">
-              Discuss your project
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light text-[var(--color-charcoal)] mb-4">
-              Let&apos;s discuss your project
-            </h2>
-            <p className="text-gray-500 mb-12 max-w-md mx-auto">
-              Describe the website you need and I&apos;ll get back to you within
-              24 hours with a plan and a quote.
-            </p>
-          </FadeIn>
-          <FadeIn>
-            <ContactForm />
-          </FadeIn>
-        </div>
-      </section>
+      <ContactSection />
 
       {/* Footer */}
       <footer className="border-t border-gray-100 py-8 px-6">
