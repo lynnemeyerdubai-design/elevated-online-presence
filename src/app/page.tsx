@@ -236,7 +236,7 @@ function ContactForm() {
         type="submit"
         className="w-full bg-[var(--color-charcoal)] text-white py-3.5 rounded-lg text-sm font-medium tracking-wide hover:bg-black transition-colors cursor-pointer"
       >
-        Start a Project
+        Send project details
       </button>
     </form>
   );
@@ -255,7 +255,7 @@ export default function Home() {
             href="#contact"
             className="text-sm text-gray-500 hover:text-[var(--color-charcoal)] transition-colors"
           >
-            Start a project
+            Discuss your project
           </a>
         </div>
       </nav>
@@ -296,7 +296,7 @@ export default function Home() {
                 href="#contact"
                 className="inline-flex items-center px-7 py-3.5 border border-gray-200 text-sm font-medium rounded-lg hover:border-gray-400 transition-colors tracking-wide text-[var(--color-charcoal)]"
               >
-                Start a project
+                Discuss your project
               </a>
             </div>
           </FadeIn>
@@ -455,10 +455,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-xs font-medium tracking-[0.2em] text-[var(--color-accent)] uppercase mb-4">
-              Start a project
+              Discuss your project
             </p>
             <h2 className="text-3xl md:text-4xl font-light text-[var(--color-charcoal)] mb-4">
-              Ready to get started?
+              Let&apos;s discuss your project
             </h2>
             <p className="text-gray-500 mb-12 max-w-md mx-auto">
               Describe the website you need and I&apos;ll get back to you within
