@@ -76,7 +76,7 @@ const steps = [
   },
   {
     title: "Launch",
-    description: "Your site goes live — typically in under five days.",
+    description: "Your site goes live — typically in under five days, dependent on scope.",
   },
 ];
 
@@ -161,9 +161,15 @@ function BrowserFrame({
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    const form = e.currentTarget;
+    const res = await fetch("https://formspree.io/f/mnjgglae", {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
+    if (res.ok) setSubmitted(true);
   }
 
   if (submitted) {
