@@ -39,7 +39,7 @@ const benefits = [
   {
     title: "Speed",
     description:
-      "Your website delivered in under five days with a clear process from brief to launch.",
+      "Delivered through a structured and efficient process from brief to launch.",
   },
   {
     title: "Clarity",
@@ -49,12 +49,12 @@ const benefits = [
   {
     title: "Content Support",
     description:
-      "I help structure and write your website content so it reads clearly and confidently.",
+      "Content is structured and written to read clearly and confidently.",
   },
   {
     title: "Fair Pricing",
     description:
-      "Professional websites without inflated agency fees and transparent pricing.",
+      "Professional websites without inflated agency fees.",
   },
 ];
 
@@ -76,7 +76,7 @@ const steps = [
   },
   {
     title: "Launch",
-    description: "Your site goes live — typically in under five days, dependent on scope.",
+    description: "Your site goes live — typically within 7 days or less, depending on scope.",
   },
 ];
 
@@ -249,23 +249,24 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight text-[var(--color-charcoal)]">
-              Professional websites
+              Professional websites that
               <br />
-              built in under{" "}
-              <span className="text-[var(--color-accent)]">5 days.</span>
+              reflect the level you{" "}
+              <span className="text-[var(--color-accent)]">operate at.</span>
             </h1>
           </FadeIn>
           <FadeIn>
             <p className="mt-8 text-lg md:text-xl text-gray-500 max-w-2xl leading-relaxed font-light">
-              For founders, consultants and small businesses who need a
-              professional online presence — fast. Clear messaging, strong
-              design, content support, and pricing that makes sense.
+              For founders, consultants, personal brands and businesses who need a
+              professional online presence that actually represents what they do.
             </p>
           </FadeIn>
           <FadeIn>
             <p className="mt-7 text-sm text-gray-400 max-w-2xl italic">
-              Designed and built by a senior executive with real business
-              experience.
+              Typically completed within 7 days or less, depending on scope.
+            </p>
+            <p className="mt-3 text-sm text-gray-400 max-w-2xl">
+              Focused on brand, positioning and how you show up online.
             </p>
           </FadeIn>
           <FadeIn>
